@@ -1,10 +1,18 @@
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.*;
 import org.junit.runner.RunWith;
 
+
 @RunWith(Cucumber.class)
-@CucumberOptions(
+@CucumberOptions(plugin = "pretty", features = "src/test/resources/features")
+public class TestRunner
+{
+    @Before
+    public void setup() {
+    }
 
-)
-
-public class TestRunner {
-
+    @After
+    public void afterTest() {
+    }
 }
